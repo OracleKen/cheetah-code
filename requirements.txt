@@ -1,0 +1,8 @@
+pyautogui~=0.9.53
+keyboard
+numpy
+pywin32
+Pillow
+opencv-python
+pynput~=1.7.6
+pydirectinput
