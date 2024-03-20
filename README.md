@@ -45,12 +45,8 @@ Default gameplay settings:
 ### 3.Start running script:
 
 ```
-git clone https://github.com/any-other-guy/Endless-Chaos.git
-cd Endless-Chaos
+git clone https://github.com/OracleKen/cheetah-code.git
+cd cheetah-code
 pip install -r requirements.txt
 python3 .\bot.py
 ```
-
-## VERY IMPORTANT: 
-This script was created solely for fulfilling my personal learning purposes. I do not commercialize it in any way. If anything is against ToS, I would take it down from the public domain.
-By running the script, you agree to accept any consequence at your own risk!
