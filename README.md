@@ -1,32 +1,7 @@
-# Endless-Chaos
+# Feature updates
 
-A Lost Ark chaos dungeon(PvE) farming bot.\
-Fully automatic mob/elite/boss detecting and clearing, based on image recognition.\
-Background running is supported with RDP Wrapper(Remote Desktop).
-
-I have been mostly running the script for my rather buffed Sorceress, of course skill/engraving and etc are fine tuned both inside [config.py](config.py)
- and in-game. You will have to tune it yourself in order to run it smoothly and efficiently without the need of HP potion.\
-So far my average 1445 dungeon floor1+2 run time is about 120-130 seconds, including loading time and random golden/purple portal appearances. A 1475 dungeon full clear is about 240-250 seconds per run. I might release a demo video in the near future...
-
-Features:
-
-- [x] Floor 1 clearing
-- [x] Floor 2 clearing
-- [x] Gold Portal clearing
-- [x] Purple Boss Portal clearing
-- [x] Optional Floor 3 daily clearing only
-- [x] Optional Floor 3 indefinite clearing for silver earning
-- [x] Auto spell cooldown detecting and cycling
-- [x] Auto game client restart on game crash/disconnect issue (experimental)
-
-
-Utilities:
-
-- [x] Auto repair
-- [x] Auto health pot at low hp, customizable percentage
-- [x] Anti-timeout detection
-- [x] Restart game client and continue running after EAC offline or game crash
-- [ ] More...
+- Update death check to happen more frequent so that reviving happens sooner (no longer goes through full skill rotation before it checks)
+- Update to DB orbs image and modified confidence level for more accurate surges  
 
 ## Getting started
 
