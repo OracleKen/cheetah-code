@@ -118,6 +118,7 @@ def main():
                     quitChaos()
                     sleep(4000, 6000)
                 if inTown != None:
+                    sleep(5000, 8000)
                     print("city loaded")
                     break
                 sleep(600, 750)
@@ -413,10 +414,12 @@ def sendToStronghold():
         if inTown != None:
             print("back in stronghold")
             break
-        sleep(1400, 1600)    
+        sleep(1400, 1600)
+        sleep(1400, 1600)
+        sleep(1400, 1600)
 
 
-                    
+
 
 def goOffline():
     mouseMoveTo(x=config["offlinePositions"][0][0], y=config["offlinePositions"][0][1])
@@ -1312,6 +1315,11 @@ def checkCDandCast(ability):
         sleep(1000, 1200)
         pydirectinput.press("g")
         sleep(100, 200)
+    elif className == "bard" and pyautogui.locateOnScreen("./screenshots/classes/" + className + ".png", region=config["regions"]["specials"], confidence=.6):
+        mouseMoveTo(x=config["screenCenterX"], y=config["screenCenterY"])
+        sleep(50, 100)
+        pydirectinput.press("x")
+        sleep(1000, 1200)
     elif className == "sharpshooter" and pyautogui.locateOnScreen("./screenshots/classes/" + className + "_bird.png", region=config["regions"]["specials"], confidence=.6):
         pydirectinput.press("z")
         sleep(50, 110)
@@ -1385,6 +1393,8 @@ def castAbility(ability, region):
         now_ms = int(time.time_ns() / 1000000)
         # spam until cast time before checking cd, to prevent 击倒后情况
         while now_ms - start_ms < ability["castTime"]:
+            print("in cast")
+            print(f"pressing key: {ability['key']}")
             pydirectinput.press(ability["key"])
             sleep(50, 60)
             now_ms = int(time.time_ns() / 1000000)
@@ -1396,6 +1406,8 @@ def castAbility(ability, region):
         # TODO: FIXME: avoid hold for now...
         start_ms = int(time.time_ns() / 1000000)
         now_ms = int(time.time_ns() / 1000000)
+        print("Is hold skill 1")
+        print(f"pressing key: {ability['key']}")
         pydirectinput.keyDown(ability["key"])
         while now_ms - start_ms < ability["holdTime"]:
             # pydirectinput.keyDown(ability["key"])
@@ -1404,33 +1416,49 @@ def castAbility(ability, region):
         #     ability["image"], region=config["regions"]["abilities"]
         # ):
         #     pydirectinput.keyDown(ability["key"])
+        print("Is hold skill 2")
+        print(f"pressing key: {ability['key']}")
         pydirectinput.keyUp(ability["key"])
     else:
         # 瞬发 ability
         if config["performance"] == True or config["GFN"] == True:
+            print("perf and gfn 1")
             pydirectinput.press(ability["key"])
             sleep(50, 60)
+            print("perf and gfn 2")
             pydirectinput.press(ability["key"])
             # sleep(50, 60)
             # pydirectinput.press(ability["key"])
             return
+        print("else")
+        print(f"pressing key: {ability['key']}")
         pydirectinput.press(ability["key"])
         start_ms = int(time.time_ns() / 1000000)
         now_ms = int(time.time_ns() / 1000000)
 
         if(ability.get("image") != None):
-            while pyautogui.locateOnScreen(
-                    ability["image"],
-                    region=region,
-            ):
+            # while pyautogui.locateOnScreen(
+            #         ability["image"],
+            #         region=region,
+            # ):
+            #     print("image is not none")
+            #     pydirectinput.press(ability["key"])
+            #     sleep(50, 60)
+            #     now_ms = int(time.time_ns() / 1000000)
+            #     if now_ms - start_ms > 15000:
+            #         print("unable to use spell for 15s, check if disconnected")
+            #         return
+            i = 1
+            while i <= 5:
+                print("5 press")
+                print(f"pressing key: {ability['key']}")
                 pydirectinput.press(ability["key"])
                 sleep(50, 60)
-                now_ms = int(time.time_ns() / 1000000)
-                if now_ms - start_ms > 15000:
-                    print("unable to use spell for 15s, check if disconnected")
-                    return
+                i+=1
         else:
             diedCheck()
+            print("in else 2")
+            print(f"pressing key: {ability['key']}")
             pydirectinput.press(ability["key"])
 
 
@@ -3322,6 +3350,7 @@ def bifrostGoTo(option):
             region=(1870, 133, 25, 30),
         )
         if inTown != None:
+            sleep(5000, 8000)
             print("city loaded")
             break
         sleep(500, 600)
@@ -3949,21 +3978,21 @@ def doLopangUnas():
         return
     if offlineCheck():
         return
-    spamG(2000)
+    spamG(4000)
     sleep(500, 600)
     bifrostGoTo(3)
     if gameCrashCheck():
         return
     if offlineCheck():
         return
-    spamG(2000)
+    spamG(4000)
     sleep(500, 600)
     bifrostGoTo(4)
     if gameCrashCheck():
         return
     if offlineCheck():
         return
-    spamG(2000)
+    spamG(4000)
 
 def useAwakening(): 
     ability = states["awakening"]

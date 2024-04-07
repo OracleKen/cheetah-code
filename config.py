@@ -20,52 +20,55 @@
 config = {
     "mainCharacter": 0,  # must be in number 0 to 5 (0 is the first character)ii
     "GFN": False,  # set True for Geforce Now users
-    "enableMultiCharacterMode": False,  # this is lit
-    "enableUnaTasks": True, 
+    "enableMultiCharacterMode": True,  # this is lit
+    "enableUnaTasks": True,
     "forceAorMode": False,
     "enableGuildDonation": True,  # please make sure all your characters have a guild
     "enableRapport": False,  # NOTE: you need to setup bifrost no3 infront of a rapport NPC
-    "floor3Mode": False,  # only enable if you ONLY want to run infinite floor3 clearing Setup your characters below:aaaaaaaaa
+    "floor3Mode": False,
+    # only enable if you ONLY want to run infinite floor3 clearing Setup your characters below:aaaaaaaaa
     # can setup UP TO 9 characters for daily chaos/lopang/guild stuff however your main must be in character 0 to 5 (
     # just for re-connect back after disconnection happens) ilvl-endless is the dungeon which you want to run
     # infinitely ilvl-aor is the daily aura of resonance dungeon you only want to run TWICE per day IMPORTANT:
     # dungeon ilvl choices are only limited to 1475, 1445, 1370, 1110 for now. I will add more later when brel comes
     # out
     "characters": [
-{
-            "index": 0,
-            "class": "sorceress",
-            "chaos": True,
-            "ilvl-endless": 1540,
-            "ilvl-aor": 1540,
-            "leapUnas": [{ "leap": "hestera", "bifrost": 3},{"leap": "ghost", "bifrost": 4}, {"leap": "voldis", "bifrost": 1}],
-            "lopang": False,
-            "guildDonation": False,
-            "rapport": False,
-            "goHome": True
-        },
         {
-            "index": 1,
-            "class": "deathblade",
+            "index": 0,
+            "class": "souleater",
             "chaos": True,
-            "ilvl-endless": 1540,
-            "ilvl-aor": 1540,
-            "leapUnas": [{ "leap": "hestera", "bifrost": 3},{"leap": "ghost", "bifrost": 4}, {"leap": "voldis", "bifrost": 1}],
+            "ilvl-endless": 1600,
+            "ilvl-aor": 1600,
+            "leapUnas": [{"leap": "hestera", "bifrost": 3}, {"leap": "ghost", "bifrost": 4},
+                         {"leap": "voldis", "bifrost": 1}],
             "lopang": False,
             "guildDonation": True,
             "rapport": False,
             "goHome": True
         },
-
+        {
+            "index": 1,
+            "class": "sorceress",
+            "chaos": True,
+            "ilvl-endless": 1540,
+            "ilvl-aor": 1540,
+            "leapUnas": [{"leap": "hestera", "bifrost": 3}, {"leap": "ghost", "bifrost": 4},
+                         {"leap": "voldis", "bifrost": 1}],
+            "lopang": False,
+            "guildDonation": True,
+            "rapport": False,
+            "goHome": True
+        },
         {
             "index": 2,
-            "class": "souleater",
+            "class": "deathblade",
             "chaos": True,
-            "ilvl-endless": 1445,
-            "ilvl-aor": 1445,
-            "leapUnas": [{ "leap": "hestera", "bifrost": 3},{"leap": "ghost", "bifrost": 4}, {"leap": "moko", "bifrost": 1}],
+            "ilvl-endless": 1540,
+            "ilvl-aor": 1540,
+            "leapUnas": [{"leap": "hestera", "bifrost": 3}, {"leap": "ghost", "bifrost": 4},
+                         {"leap": "voldis", "bifrost": 1}],
             "lopang": False,
-            "guildDonation": False,
+            "guildDonation": True,
             "rapport": False,
             "goHome": True
         },
@@ -73,44 +76,45 @@ config = {
             "index": 3,
             "class": "bard",
             "chaos": True,
-            "ilvl-endless": 1475,
-            "ilvl-aor": 1475,
+            "ilvl-endless": 1490,
+            "ilvl-aor": 1490,
             "lopang": True,
             # "leapUnas": [{ "leap": "hestera", "bifrost": 0},{"leap": "ghost", "bifrost": 2}, {"leap": "voldis", "bifrost": 1}],
             "guildDonation": True,
             "rapport": False,
             "goHome": True
-        },    
+        },
         {
             "index": 4,
             "class": "artist",
             "chaos": False,
-            "ilvl-endless": 1445,
-            "ilvl-aor": 1445,
+            "ilvl-endless": 1520,
+            "ilvl-aor": 1520,
             # "leapUnas": [{ "leap": "hestera", "bifrost": 3},{"leap": "ghost", "bifrost": 2}, {"leap": "voldis", "bifrost": 4}],
             "lopang": True,
-            "guildDonation": False,
+            "guildDonation": True,
             "rapport": False,
             "goHome": True
-        },          
+        },
         {
             "index": 5,
-            "class": "spear",
-            "chaos": True,
-            "ilvl-endless": 1340,
-            "ilvl-aor": 1340,
-            # "leapUnas": [{ "leap": "hestera", "bifrost": 3},{"leap": "ghost", "bifrost": 2}, {"leap": "voldis", "bifrost": 4}],
-            "lopang": True,
-            "guildDonation": False,
+            "class": "aero",
+            "chaos": False,
+            "ilvl-endless": 1520,
+            "ilvl-aor": 1520,
+            "leapUnas": [{"leap": "hestera", "bifrost": 3}, {"leap": "ghost", "bifrost": 4},
+                         {"leap": "voldis", "bifrost": 1}],
+            "lopang": False,
+            "guildDonation": True,
             "rapport": False,
             "goHome": True
         },
         {
             "index": 6,
-            "class": "deathblade",
+            "class": "spear",
             "chaos": True,
-            "ilvl-endless": 1415,
-            "ilvl-aor": 1415,
+            "ilvl-endless": 1340,
+            "ilvl-aor": 1340,
             # "leapUnas": [{ "leap": "hestera", "bifrost": 3},{"leap": "ghost", "bifrost": 2}, {"leap": "voldis", "bifrost": 4}],
             "lopang": True,
             "guildDonation": False,
@@ -135,6 +139,18 @@ config = {
             "chaos": True,
             "ilvl-endless": 1445,
             "ilvl-aor": 1445,
+            # "leapUnas": [{ "leap": "hestera", "bifrost": 3},{"leap": "ghost", "bifrost": 2}, {"leap": "voldis", "bifrost": 4}],
+            "lopang": True,
+            "guildDonation": False,
+            "rapport": False,
+            "goHome": True
+        },
+        {
+            "index": 9,
+            "class": "deathblade",
+            "chaos": True,
+            "ilvl-endless": 1415,
+            "ilvl-aor": 1415,
             # "leapUnas": [{ "leap": "hestera", "bifrost": 3},{"leap": "ghost", "bifrost": 2}, {"leap": "voldis", "bifrost": 4}],
             "lopang": True,
             "guildDonation": False,
@@ -226,8 +242,6 @@ config = {
         #     "rapport": False,
         # },
 
-
-
         # {
         #     "index": 12,
         #     "class": "arty",
@@ -238,9 +252,7 @@ config = {
         #     "guildDonation": True,
         #     "rapport": False,
         # },
- 
 
-        
     ],
     "performance": False,  # set True for lower-end PCs
     "interact": "g",  # change this if you have binded it to something else eg.mouse button
@@ -253,7 +265,8 @@ config = {
     # "useAwakening": True, # not checking this for now
     # "useSpeciality1": True, # not checking this for now
     # "useSpeciality2": True, # not checking this for now
-    "auraRepair": True,  # True if you have aura, if not then for non-aura users: MUST have your character parked near a repairer in city before starting the script
+    "auraRepair": True,
+    # True if you have aura, if not then for non-aura users: MUST have your character parked near a repairer in city before starting the script
     "shortcutEnterChaos": True,  # you want to use True
     "useHealthPot": False,  # you want to use True
     "useHealthPotAor": True,
@@ -274,11 +287,13 @@ config = {
     "clickableAreaX": 500,
     "clickableAreaY": 250,
     "screenCenterX": 960,
-    "screenCenterY": 540,
+    "screenCenterY": 530,
     "minimapCenterX": 1772,
     "minimapCenterY": 272,
-    "timeLimit": 420000,  # to prevent unexpected amount of time spent in a chaos dungeon, a tiem limit is set here, will quit after this amount of seconds
-    "timeLimitAor": 600000,  # to prevent unexpected amount of time spent in a chaos dungeon, a tiem limit is set here, will quit after this amount of seconds
+    "timeLimit": 420000,
+    # to prevent unexpected amount of time spent in a chaos dungeon, a tiem limit is set here, will quit after this amount of seconds
+    "timeLimitAor": 600000,
+    # to prevent unexpected amount of time spent in a chaos dungeon, a tiem limit is set here, will quit after this amount of seconds
     "blackScreenTimeLimit": 90000,  # if stuck in nothing for this amount of time, alt f4 game, restart and resume.
     "delayedStart": 1000,
     "portalPause": 700,
@@ -323,7 +338,7 @@ config = {
         [1160, 620],
         [760, 620],
         [960, 620],
-        [1160, 620]       
+        [1160, 620]
     ],
     "offlinePositions": [
         [1826, 905],
