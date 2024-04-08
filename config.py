@@ -33,12 +33,12 @@ config = {
     # dungeon ilvl choices are only limited to 1475, 1445, 1370, 1110 for now. I will add more later when brel comes
     # out
     "characters": [
-        {
+{
             "index": 0,
-            "class": "souleater",
+            "class": "aero",
             "chaos": True,
-            "ilvl-endless": 1600,
-            "ilvl-aor": 1600,
+            "ilvl-endless": 1520,
+            "ilvl-aor": 1520,
             "leapUnas": [{"leap": "hestera", "bifrost": 3}, {"leap": "ghost", "bifrost": 4},
                          {"leap": "voldis", "bifrost": 1}],
             "lopang": False,
@@ -48,6 +48,19 @@ config = {
         },
         {
             "index": 1,
+            "class": "souleater",
+            "chaos": True,
+            "ilvl-endless": 1610,
+            "ilvl-aor": 1610,
+            "leapUnas": [{"leap": "hestera", "bifrost": 3}, {"leap": "ghost", "bifrost": 4},
+                         {"leap": "voldis", "bifrost": 1}],
+            "lopang": False,
+            "guildDonation": True,
+            "rapport": False,
+            "goHome": True
+        },
+        {
+            "index": 2,
             "class": "sorceress",
             "chaos": True,
             "ilvl-endless": 1540,
@@ -60,7 +73,7 @@ config = {
             "goHome": True
         },
         {
-            "index": 2,
+            "index": 3,
             "class": "deathblade",
             "chaos": True,
             "ilvl-endless": 1540,
@@ -73,7 +86,7 @@ config = {
             "goHome": True
         },
         {
-            "index": 3,
+            "index": 4,
             "class": "bard",
             "chaos": True,
             "ilvl-endless": 1490,
@@ -85,26 +98,13 @@ config = {
             "goHome": True
         },
         {
-            "index": 4,
+            "index": 5,
             "class": "artist",
-            "chaos": False,
+            "chaos": True,
             "ilvl-endless": 1520,
             "ilvl-aor": 1520,
             # "leapUnas": [{ "leap": "hestera", "bifrost": 3},{"leap": "ghost", "bifrost": 2}, {"leap": "voldis", "bifrost": 4}],
             "lopang": True,
-            "guildDonation": True,
-            "rapport": False,
-            "goHome": True
-        },
-        {
-            "index": 5,
-            "class": "aero",
-            "chaos": False,
-            "ilvl-endless": 1520,
-            "ilvl-aor": 1520,
-            "leapUnas": [{"leap": "hestera", "bifrost": 3}, {"leap": "ghost", "bifrost": 4},
-                         {"leap": "voldis", "bifrost": 1}],
-            "lopang": False,
             "guildDonation": True,
             "rapport": False,
             "goHome": True

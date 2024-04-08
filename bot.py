@@ -1393,8 +1393,6 @@ def castAbility(ability, region):
         now_ms = int(time.time_ns() / 1000000)
         # spam until cast time before checking cd, to prevent 击倒后情况
         while now_ms - start_ms < ability["castTime"]:
-            print("in cast")
-            print(f"pressing key: {ability['key']}")
             pydirectinput.press(ability["key"])
             sleep(50, 60)
             now_ms = int(time.time_ns() / 1000000)
@@ -1406,8 +1404,6 @@ def castAbility(ability, region):
         # TODO: FIXME: avoid hold for now...
         start_ms = int(time.time_ns() / 1000000)
         now_ms = int(time.time_ns() / 1000000)
-        print("Is hold skill 1")
-        print(f"pressing key: {ability['key']}")
         pydirectinput.keyDown(ability["key"])
         while now_ms - start_ms < ability["holdTime"]:
             # pydirectinput.keyDown(ability["key"])
@@ -1416,8 +1412,6 @@ def castAbility(ability, region):
         #     ability["image"], region=config["regions"]["abilities"]
         # ):
         #     pydirectinput.keyDown(ability["key"])
-        print("Is hold skill 2")
-        print(f"pressing key: {ability['key']}")
         pydirectinput.keyUp(ability["key"])
     else:
         # 瞬发 ability
@@ -1430,8 +1424,6 @@ def castAbility(ability, region):
             # sleep(50, 60)
             # pydirectinput.press(ability["key"])
             return
-        print("else")
-        print(f"pressing key: {ability['key']}")
         pydirectinput.press(ability["key"])
         start_ms = int(time.time_ns() / 1000000)
         now_ms = int(time.time_ns() / 1000000)
@@ -1450,15 +1442,11 @@ def castAbility(ability, region):
             #         return
             i = 1
             while i <= 5:
-                print("5 press")
-                print(f"pressing key: {ability['key']}")
                 pydirectinput.press(ability["key"])
                 sleep(50, 60)
                 i+=1
         else:
             diedCheck()
-            print("in else 2")
-            print(f"pressing key: {ability['key']}")
             pydirectinput.press(ability["key"])
 
 
